@@ -1,0 +1,54 @@
+{
+    "name": "peeyush-budhia/sanitizer",
+    "description": "",
+    "keywords": [
+        "peeyush-budhia",
+        "sanitizer"
+    ],
+    "homepage": "https://github.com/peeyush-budhia/sanitizer",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Peeyush Budhia",
+            "email": "peeyush.budhia@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PeeyushBudhia\\Sanitizer\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PeeyushBudhia\\Sanitizer\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PeeyushBudhia\\Sanitizer\\SanitizerServiceProvider"
+            ],
+            "aliases": {
+                "Sanitizer": "PeeyushBudhia\\Sanitizer\\SanitizerFacade"
+            }
+        }
+    }
+}
