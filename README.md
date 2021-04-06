@@ -1,4 +1,4 @@
-# Very short description of the package
+# Laravel Sanitizer
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/peeyush-budhia/sanitizer.svg?style=flat-square)](https://packagist.org/packages/peeyush-budhia/sanitizer)
 [![Total Downloads](https://img.shields.io/packagist/dt/peeyush-budhia/sanitizer.svg?style=flat-square)](https://packagist.org/packages/peeyush-budhia/sanitizer)
