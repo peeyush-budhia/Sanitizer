@@ -1,11 +1,11 @@
 <?php
 
-namespace PeeyushBudhia\Sanitizer;
+namespace Peeyush\Sanitizer;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \PeeyushBudhia\Sanitizer\Skeleton\SkeletonClass
+ * @see \Peeyush\Sanitizer\Skeleton\SkeletonClass
  */
 class SanitizerFacade extends Facade
 {

@@ -1,9 +1,19 @@
 {
     "name": "peeyush-budhia/sanitizer",
-    "description": "",
+    "description": "Sanitization library for PHP and the Laravel framework.",
     "keywords": [
         "peeyush-budhia",
-        "sanitizer"
+        "laravel",
+        "php",
+        "sanitizer",
+        "sanitization",
+        "filter",
+        "input sanitizer",
+        "input sanitization",
+        "input filter",
+        "data sanitizer",
+        "data sanitization",
+        "data filter"
     ],
     "homepage": "https://github.com/peeyush-budhia/sanitizer",
     "license": "MIT",
@@ -16,21 +26,22 @@
         }
     ],
     "require": {
-        "php": "^7.1",
-        "illuminate/support": "^6.0"
+        "php": "^7.4",
+        "illuminate/support": "^6.0|^7.0|^8.0",
+        "illuminate/validation": "^6.0|^7.0|^8.0",
+        "nesbot/carbon": "^1.0|^2.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^4.0",
         "phpunit/phpunit": "^8.0"
     },
     "autoload": {
         "psr-4": {
-            "PeeyushBudhia\\Sanitizer\\": "src"
+            "Peeyush\\Sanitizer\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "PeeyushBudhia\\Sanitizer\\Tests\\": "tests"
+            "Peeyush\\Sanitizer\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -44,10 +55,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "PeeyushBudhia\\Sanitizer\\SanitizerServiceProvider"
+                "Peeyush\\Sanitizer\\SanitizerServiceProvider"
             ],
             "aliases": {
-                "Sanitizer": "PeeyushBudhia\\Sanitizer\\SanitizerFacade"
+                "Sanitizer": "Peeyush\\Sanitizer\\SanitizerFacade"
             }
         }
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace PeeyushBudhia\Sanitizer;
+namespace Peeyush\Sanitizer;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -20,14 +20,11 @@ class SanitizerServiceProvider extends ServiceProvider
         // $this->loadRoutesFrom(__DIR__.'/routes.php');
 
         if ($this->app->runningInConsole()) {
-            $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('sanitizer.php'),
-            ], 'config');
 
-            // Publishing the views.
-            /*$this->publishes([
-                __DIR__.'/../resources/views' => resource_path('views/vendor/sanitizer'),
-            ], 'views');*/
+            # Publishing tests.
+            $this->publishes([
+                __DIR__.'/../tests' => base_path('tests/Unit'),
+            ], 'views');
 
             // Publishing assets.
             /*$this->publishes([
@@ -49,12 +46,9 @@ class SanitizerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'sanitizer');
-
         // Register the main class to use with the facade
-        $this->app->singleton('sanitizer', function () {
-            return new Sanitizer;
+        $this->app->singleton('sanitizer', function ($app) {
+            return new Factory;
         });
     }
 }

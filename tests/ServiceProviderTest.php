@@ -1,11 +1,11 @@
 <?php
 
-namespace PeeyushBudhia\Sanitizer\Tests;
+namespace Peeyush\Sanitizer\Tests;
 
-use Orchestra\Testbench\TestCase;
-use PeeyushBudhia\Sanitizer\SanitizerServiceProvider;
+use Peeyush\Sanitizer\SanitizerServiceProvider;
+use PHPUnit\Framework\TestCase;
 
-class ExampleTest extends TestCase
+class ServiceProviderTest extends TestCase
 {
 
     protected function getPackageProviders($app)
