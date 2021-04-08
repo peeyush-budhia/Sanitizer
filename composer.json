@@ -58,7 +58,7 @@
                 "Peeyush\\Sanitizer\\SanitizerServiceProvider"
             ],
             "aliases": {
-                "Sanitizer": "Peeyush\\Sanitizer\\SanitizerFacade"
+                "Sanitizer": "Peeyush\\Sanitizer\\Facade\\SanitizerFacade"
             }
         }
     }

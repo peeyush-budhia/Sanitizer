@@ -1,6 +1,6 @@
 <?php
 
-namespace Peeyush\Sanitizer;
+namespace Peeyush\Sanitizer\Facade;
 
 use Illuminate\Support\Facades\Facade;
 
