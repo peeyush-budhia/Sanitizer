@@ -11,11 +11,16 @@ class SanitizerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if ($this->app->runningInConsole()) 
-        {    
+        if ($this->app->runningInConsole()) {
+
+            # Publishing tests.
+            // $this->publishes([
+            //     __DIR__.'/../tests' => base_path('tests/Unit'),
+            // ], 'views');
+
             # Publish stubs
             $this->publishes([
-                __DIR__.'/stubs/request.stub' => base_path('stubs'),
+                __DIR__.'/../stubs/request.stub' => base_path('stubs'),
             ], 'stubs');
         }
     }
