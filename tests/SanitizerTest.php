@@ -111,7 +111,9 @@ class SanitizerTest extends TestCase
             'name' => ' Sina '
         ];
         $filters = [
-            'name' => ['trim', fn ($value) => strtoupper($value)]
+            'name' => ['trim', function ($value) {
+                return strtoupper($value);
+            }]
         ];
         $data = $this->sanitize($data, $filters);
 
