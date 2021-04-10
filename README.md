@@ -1,7 +1,14 @@
 # Laravel Sanitizer
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/peeyush-budhia/sanitizer.svg?style=flat-square)](https://packagist.org/packages/peeyush-budhia/sanitizer)
-[![Total Downloads](https://img.shields.io/packagist/dt/peeyush-budhia/sanitizer.svg?style=flat-square)](https://packagist.org/packages/peeyush-budhia/sanitizer)
+[![PHP Version](https://img.shields.io/packagist/php-v/peeyush-budhia/sanitizer?color=blue&style=for-the-badge)]()
+[![LICENSE](https://img.shields.io/packagist/l/peeyush-budhia/sanitizer?color=blue&style=for-the-badge)](https://github.com/peeyush-budhia/sanitizer/blob/master/LICENSE.md)
+
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/peeyush-budhia/sanitizer.svg?color=blue&style=for-the-badge)](https://packagist.org/packages/peeyush-budhia/sanitizer)
+[![Total Downloads](https://img.shields.io/packagist/dt/peeyush-budhia/sanitizer.svg?color=blue&style=for-the-badge)](https://packagist.org/packages/peeyush-budhia/sanitizer)
+
+[![Build Status](https://img.shields.io/travis/com/peeyush-budhia/sanitizer?style=for-the-badge)](https://travis-ci.com/peeyush-budhia/sanitizer)
+
+
 
 Sanitization library for PHP and the Laravel framework.
 
