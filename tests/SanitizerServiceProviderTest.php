@@ -5,7 +5,7 @@ namespace Peeyush\Sanitizer\Tests;
 use Peeyush\Sanitizer\SanitizerServiceProvider;
 use PHPUnit\Framework\TestCase;
 
-class ServiceProviderTest extends TestCase
+class SanitizerServiceProviderTest extends TestCase
 {
 
     protected function getPackageProviders($app)

@@ -9,7 +9,7 @@ Sanitization library for PHP and the Laravel framework.
 
 You can install the package via composer:
 
-```bash
+```sh
 composer require peeyush-budhia/sanitizer
 ```
 
@@ -53,13 +53,41 @@ Will return:
 
 ## Laravel Usage
 
-You can use the Sanitizer through the Facade:
+- Register the `provider` and update the `alias` of Sanitizer in `config/app.php` as under:
+
+```php
+'providers' => [
+        /*
+         * Package Service Providers...
+         */
+        \Peeyush\Sanitizer\SanitizerServiceProvider::class,
+    ]
+```
+
+```php
+'aliases' => [
+        /*
+         * Package aliases...
+         */
+        'Sanitizer' => \Peeyush\Sanitizer\Facade\SanitizerFacade::class,
+    ],
+```
+
+- Now Publish `request.stub` and `tests` directory. To publish, run the following command on terminal, in the document root of the application:
+
+```sh
+php artisan vendor:publish --provider="Peeyush\Sanitizer\SanitizerServiceProvider"
+```
+
+###### After the above process you can use Sanitizer as follows
+
+- Use the Sanitizer through the Facade:
 
 ```php
 $data = Sanitizer::make($data, $filters)->sanitize();
 ```
 
-Use SanitizeInput trait to Sanitize input in your FormRequests. Please note you need to add    filters method which returns the filters you want to apply to the input.
+- Use SanitizeInput trait to Sanitize input in your FormRequests. Please note you need to add filters method which returns the filters you want to apply to the input.
 
 ```php
 namespace App\Http\Requests;
@@ -78,6 +106,13 @@ class ExampleRequest extends Request
     }
 }
 ```
+
+- To auto generate the Request file run the following command on terminal, in the document root of the application:
+
+```sh
+php artisan make:Request ExampleRequest
+```
+
 ## Available Filters
 
  Filter               | Description
@@ -87,13 +122,14 @@ class ExampleRequest extends Request
  `lowercase`          | Converts a string to lowercase
  `uppercase`          | Converts a string to UPPERCASE
  `capitalize`         | Converts a string to Title Case
- `cast`               | Casts a variable into the given type. Options are: `int`, `float`, `string`, `bool`, `object`, `array` and Laravel Collection `collection`.
+ `cast`               | Casts a variable into the given type. Options are: `int`, `float`, `string`, `bool`, `object`, `array` and Laravel Collection `collection`
  `format_date`        | Converts the date format. It takes two arguments, `first` date's given format `second` date's target format
  `strip_tags`         | Strip HTML and PHP tags
  `digit`              | Get only digit characters from a string
 
 ## Custom Filters
-Use Closure or Class that implements `Peeyush\Sanitizer\Contracts\Filter` interface:
+
+- Use Closure or Class that implements `Peeyush\Sanitizer\Contracts\Filter` interface:
 
 ```php
 class RemoveStringFilter implements \Peeyush\Sanitizer\Contracts\Filter
@@ -110,6 +146,7 @@ $filters = [
 
 $sanitize = new Sanitizer($data, $filters)
 ```
+
 ## Credits
 
 - [Peeyush Budhia](https://github.com/peeyush-budhia)

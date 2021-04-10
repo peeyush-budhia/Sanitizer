@@ -11,15 +11,7 @@ class SanitizerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        /*
-         * Optional methods to load your package assets
-         */
-        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'sanitizer');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'sanitizer');
-        // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        // $this->loadRoutesFrom(__DIR__.'/routes.php');
-
-        if ($this->app->runningInConsole()) 
+        if ($this->app->runningInConsole())
         {
             # Publish stubs
             $this->publishes([
@@ -28,7 +20,7 @@ class SanitizerServiceProvider extends ServiceProvider
 
             # Publish Unit tests
             $this->publishes([
-                __DIR__.'/../tests/Unit' => base_path('tests/Unit'),
+                __DIR__.'/tests' => base_path('tests/Unit'),
             ], 'tests');
         }
     }
